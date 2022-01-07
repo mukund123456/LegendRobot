@@ -85,9 +85,8 @@ Uptime - {}!
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I Can Help U To Manage Ur Group Have a look at the following for an idea of some of the things I can help you with.
-
+𝐇𝐞𝐥𝐥𝐨, 𝐈 𝐚𝐦 𝐀𝐥𝐢𝐞𝐧 𝐗 . 𝐈 𝐚𝐦 𝐚 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐠𝐫𝐨𝐮𝐩 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐛𝐨𝐭. 
+𝐈 𝐜𝐚𝐧 𝐌𝐚𝐧𝐚𝐠𝐞 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 𝐒𝐦𝐨𝐨𝐭𝐡𝐥𝐲, 𝐄𝐚𝐬𝐢𝐥𝐲, 𝐚𝐧𝐝 𝐄𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲 !!!
 *Main* commands available:
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
@@ -228,7 +227,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ADD ME IN YOUR GROUP ⚡️",
+                                text="⚡️ ADD ME IN YOUR GROUP ⚡️",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -236,11 +235,11 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="SUPPORT ⚡️",
+                                text="⚡️ SUPPORT ⚡️",
                                 url=f"https://t.me/Superearth_95",
                             ),
                             InlineKeyboardButton(
-                                text="UPDATES ⚡️",
+                                text="⚡️ UPDATES ⚡️",
                                 url="https://t.me/Superearth_95",
                             ),
                         ],
@@ -579,7 +578,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 2082798662 and DONATION_LINK:
+        if OWNER_ID != 2006619406 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me"
                 "[here]({})".format(DONATION_LINK),
