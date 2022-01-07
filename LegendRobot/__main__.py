@@ -104,13 +104,13 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-LegendRobot_IMG = START_IMAGE
+AlienX_IMG = START_IMAGE
 
-LegendRobotG_IMG = "https://telegra.ph/file/e575d1148171cc81c62f3.jpg"
+AlienX_IMG = "https://telegra.ph/file/e335635c282b4f8ae7486.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [LegendBoy](https://t.me/The_LegendBoy)..
- Those who cannot provide monetary support are welcome to help us develop the bot at @Legend_Userbot.
+ You can support the project by contacting [LegendBoy](https://t.me/LEGEND_MUKUND)..
+ Those who cannot provide monetary support are welcome to help us develop the bot at @Superearth_95.
  """
 
 IMPORTED = {}
@@ -237,17 +237,14 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="SUPPORT ⚡️",
-                                url=f"https://t.me/{SUPPORT_CHAT}",
+                                url=f"https://t.me/Superearth_95",
                             ),
                             InlineKeyboardButton(
                                 text="UPDATES ⚡️",
-                                url="https://t.me/Official_LegendBot",
+                                url="https://t.me/Superearth_95",
                             ),
                         ],
                         [
-                            InlineKeyboardButton(
-                                text="SOURCE CODE ⚡️",
-                                url="https://github.com/LEGEND-OS/LegendRobot",
                             ),
                         ],
                     ]
@@ -688,3 +685,5 @@ if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     main()
+
+                           
