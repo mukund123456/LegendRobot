@@ -4,7 +4,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from LegendRobot import (
+from 𝐀𝐋𝐈𝐄𝐍™ 𝐗 import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -26,9 +26,9 @@ from LegendRobot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from LegendRobot.modules import ALL_MODULES
-from LegendRobot.modules.helper_funcs.chat_status import is_user_admin
-from LegendRobot.modules.helper_funcs.misc import paginate_modules
+from 𝐀𝐋𝐈𝐄𝐍™ 𝐗.modules import ALL_MODULES
+from 𝐀𝐋𝐈𝐄𝐍™ 𝐗.modules.helper_funcs.chat_status import is_user_admin
+from 𝐀𝐋𝐈𝐄𝐍™ 𝐗.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -76,24 +76,24 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hey {}, my name is {}! 
-I am Smoothest and Fastest Telegram Group Management bot. You can find my list of available commands with /help.
+𝐈 𝐚𝐦 𝐒𝐦𝐨𝐨𝐭𝐡𝐞𝐬𝐭 𝐚𝐧𝐝 𝐅𝐚𝐬𝐭𝐞𝐬𝐭 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐛𝐨𝐭. 𝐉𝐮𝐬𝐭 𝐟𝐞𝐥𝐥 𝐭𝐡𝐞 𝐩𝐨𝐰𝐞𝐫 𝐈 𝐚𝐦 𝐀𝐋𝐈𝐄𝐍™ 𝐗. 𝐓𝐨 𝐯𝐢𝐞𝐰 𝐭𝐡𝐞 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐮𝐬𝐞 /help.
 """
 
 G_START_TEXT = """
-Hello Sir I Am Online
-Uptime - {}!
+𝐊𝐧𝐨𝐜𝐤 𝐊𝐧𝐨𝐜𝐤 𝐀𝐋𝐈𝐄𝐍™ 𝐗 𝐡𝐞𝐫𝐞
+𝐔𝐩𝐭𝐢𝐦𝐞 - {}!
 """
 
 HELP_STRINGS = """
 𝐇𝐞𝐥𝐥𝐨, 𝐈 𝐚𝐦 𝐀𝐥𝐢𝐞𝐧 𝐗 . 𝐈 𝐚𝐦 𝐚 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐠𝐫𝐨𝐮𝐩 𝐦𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐛𝐨𝐭. 
-𝐈 𝐜𝐚𝐧 𝐌𝐚𝐧𝐚𝐠𝐞 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩𝐬 𝐒𝐦𝐨𝐨𝐭𝐡𝐥𝐲, 𝐄𝐚𝐬𝐢𝐥𝐲, 𝐚𝐧𝐝 𝐄𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲 !!!
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
+𝐁𝐚𝐬𝐞𝐝 𝐨𝐧 𝐁𝐞𝐧 𝟏𝟎 𝐭𝐡𝐞𝐦𝐞 !!!
+*𝐌𝐚𝐢𝐧* 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞:
+ • /help: 𝐏𝐌'𝐬 𝐲𝐨𝐮 𝐭𝐡𝐢𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞.
+ • /help <module name>: 𝐏𝐌'𝐬 𝐲𝐨𝐮 𝐢𝐧𝐟𝐨 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐚𝐭 𝐦𝐨𝐝𝐮𝐥𝐞.
+ • /donate: 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐨𝐧 𝐡𝐨𝐰 𝐭𝐨 𝐝𝐨𝐧𝐚𝐭𝐞!
  • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+   • in PM: 𝐰𝐢𝐥𝐥 𝐬𝐞𝐧𝐝 𝐲𝐨𝐮 𝐲𝐨𝐮𝐫 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐟𝐨𝐫 𝐚𝐥𝐥 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐦𝐨𝐝𝐮𝐥𝐞𝐬.
+   • in a group: 𝐰𝐢𝐥𝐥 𝐫𝐞𝐝𝐢𝐫𝐞𝐜𝐭 𝐲𝐨𝐮 𝐭𝐨 𝐩𝐦, 𝐰𝐢𝐭𝐡 𝐚𝐥𝐥 𝐭𝐡𝐚𝐭 𝐜𝐡𝐚𝐭'𝐬 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬.
 
 
 {}
@@ -236,11 +236,11 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="⚡️ SUPPORT ⚡️",
-                                url=f"https://t.me/Superearth_95",
+                                url=f"https://t.me/Alienxsupport",
                             ),
                             InlineKeyboardButton(
                                 text="⚡️ UPDATES ⚡️",
-                                url="https://t.me/Superearth_95",
+                                url="https://t.me/Alienxsupport",
                             ),
                         ],
                         [
